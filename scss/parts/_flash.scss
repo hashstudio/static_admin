@@ -1,0 +1,59 @@
+.flash-list {
+  @include reset-list;
+  margin: 20px 0;
+
+  li {
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    background-color: $grey;
+    border: {
+      style: solid;
+      color: darken($grey, 10%);
+      width: 1px;
+    }
+    padding: 15px $defaultPadding 15px $defaultPadding + 33px + 15px;
+    margin-bottom: 10px;
+
+    background: {
+      position: $defaultPadding 50%;
+      repeat: no-repeat;
+    }
+
+    .icon {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      @include opacity(0.5);
+    }
+
+    &.success {
+      background-image: url(../images/icons/icon-success.png);
+      color: #948461;
+      border-color: #EBE2B6;
+      background-color: #F9F6E3;
+    }
+
+    &.info {
+      background-image: url(../images/icons/icon-info.png);
+      color: #948461;
+      border-color: #EBE2B6;
+      background-color: #F9F6E3;
+    }
+
+    &.error {
+      background-image: url(../images/icons/icon-error.png);
+      color: #ca8989;
+      border-color: #e2b7b7;
+      background-color: #fdeaea;
+    }
+
+    &.warning {
+      background-image: url(../images/icons/icon-warning.png);
+      color: #c48383;
+      border-color: #f1d0d0;
+      background-color: #ffebeb;
+    }
+  }
+}
